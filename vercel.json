@@ -1,8 +1,6 @@
 {
   "name": "Vars Skyr Delivery App",
   "version": 2,
-  "buildCommand": "# No build needed for static site",
-  "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
   "env": [
