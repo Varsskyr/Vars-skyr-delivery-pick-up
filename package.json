@@ -1,0 +1,19 @@
+{
+  "name": "vars-skyr-delivery-app",
+  "version": "1.0.0",
+  "description": "Browser-based delivery tracking app for Vars Skyr drivers",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static app - no build needed'",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "delivery",
+    "tracking",
+    "route-management"
+  ],
+  "author": "Vars Skyr",
+  "license": "MIT",
+  "dependencies": {}
+}

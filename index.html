@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vars Skyr | Route Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+<main class="content">
+<header class="topbar">
+  <div class="header-left">
+    <a class="brand" href="#">
+      <span class="brand-mark">V</span>
+      <span>Vars Skyr</span>
+    </a>
+  </div>
+  <div class="header-center">
+    <p class="eyebrow">Route Management</p>
+    <h1>Delivery Driver</h1>
+  </div>
+  <div class="header-right">
+    <label class="role-picker">
+      Viewing as
+      <select id="role-select">
+        <option>Owner</option>
+        <option>Driver</option>
+        <option>Wholesaler</option>
+      </select>
+    </label>
+  </div>
+</header>
+<section class="route-summary">
+  <div>
+    <p class="eyebrow">Route progress</p>
+    <h2>Keep the route moving</h2>
+  </div>
+  <div class="meter-grid">
+    <article class="route-meter">
+      <div>
+        <span>Deliveries</span>
+        <strong id="overview-percent">0%</strong>
+      </div>
+      <div class="progress-track">
+        <div id="overview-progress" class="progress-bar"></div>
+      </div>
+      <small id="overview-route-status">No deliveries loaded</small>
+    </article>
+    <article class="route-meter">
+      <div>
+        <span>Pick ups</span>
+        <strong id="pickup-percent">0%</strong>
+      </div>
+      <div class="progress-track">
+        <div id="pickup-progress" class="progress-bar pickup-progress"></div>
+      </div>
+      <small id="pickup-route-status">No pick ups loaded</small>
+    </article>
+  </div>
+</section>
+<div class="section-tabs">
+  <button class="tab-button active" data-tab="deliveries">📦 Deliveries</button>
+  <button class="tab-button" data-tab="pickups">🔄 Pick ups</button>
+</div>
+<section id="deliveries" class="section active-section">
+  <div class="section-header">
+    <div>
+      <h2>Delivery List</h2>
+      <p class="section-description">Manage delivery stops for today</p>
+    </div>
+    <div class="section-actions">
+      <label class="secondary-button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 7l2-3h12l2 3M6 7v10c0 1 .5 2 1.5 2h9c1 0 1.5-1 1.5-2V7"/>
+        </svg>
+        Import CSV
+        <input id="delivery-csv" type="file" accept=".csv,text/csv" hidden />
+      </label>
+      <button class="secondary-button" id="delivery-clear-btn">Clear all</button>
+    </div>
+  </div>
+  <div id="delivery-list" class="delivery-list"></div>
+</section>
+<section id="pickups" class="section">
+  <div class="section-header">
+    <div>
+      <h2>Pick Up List</h2>
+      <p class="section-description">Manage pick up stops for today</p>
+    </div>
+    <div class="section-actions">
+      <label class="secondary-button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 7l2-3h12l2 3M6 7v10c0 1 .5 2 1.5 2h9c1 0 1.5-1 1.5-2V7"/>
+        </svg>
+        Import CSV
+        <input id="pickup-csv" type="file" accept=".csv,text/csv" hidden />
+      </label>
+      <button class="secondary-button" id="pickup-clear-btn">Clear all</button>
+    </div>
+  </div>
+  <div id="pickup-list" class="delivery-list"></div>
+</section>
+</main>
+</div>
+<script src="supabase-config.js"></script><script src="app.js"></script>
+</body>
+</html>
