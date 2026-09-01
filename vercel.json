@@ -1,12 +1,6 @@
 {
-  "name": "Vars Skyr Delivery App",
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "env": {
-    "VITE_SUPABASE_URL": "@supabase_url",
-    "VITE_SUPABASE_ANON_KEY": "@supabase_anon_key"
-  },
   "rewrites": [
     {
       "source": "/:path*",
