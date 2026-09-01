@@ -22,3 +22,4 @@ Wix integration is intentionally paused. Orders can be entered manually or loade
 CSV files should include `customer`, `address`, and `tubs` columns. Optional `id`, `phone`, and `area` columns are also supported. Phone links call the number, and Directions opens Google Maps for the delivery address. Example: `customer,address,phone,tubs,area`. The Supabase publishable key is stored in `supabase-config.js`; it is intended for browser use, while secret and service-role keys must never be placed there.
 
 Pickups are stored in the Supabase `pickup_deliveries` table and fall back to `routeboard-pickups` in the browser when the database is unavailable. Existing locally stored pickups are uploaded automatically when the shared pickup table is empty.
+# Vars-skyr-delivery-pick-up
