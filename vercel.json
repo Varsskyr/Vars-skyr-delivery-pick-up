@@ -3,20 +3,10 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "env": [
-    {
-      "key": "VITE_SUPABASE_URL",
-      "description": "Supabase project URL",
-      "value": "@supabase_url",
-      "type": "secret"
-    },
-    {
-      "key": "VITE_SUPABASE_ANON_KEY",
-      "description": "Supabase anonymous key",
-      "value": "@supabase_anon_key",
-      "type": "secret"
-    }
-  ],
+  "env": {
+    "VITE_SUPABASE_URL": "@supabase_url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase_anon_key"
+  },
   "rewrites": [
     {
       "source": "/:path*",
